@@ -18,6 +18,18 @@
  * @package WordPress
  */
 
+
+// Clever Cloud HTTPS fix
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+    $_SERVER['HTTPS'] = 'on';
+}
+
+// Force URLs to avoid issue with cookies/redirections
+define('WP_HOME', getenv('WP_HOME') ?: 'https://app-8cdce3b4-0648-4cb7-88ce-37cff286a29e.cleverapps.io');
+define('WP_SITEURL', getenv('WP_SITEURL') ?: 'https://app-8cdce3b4-0648-4cb7-88ce-37cff286a29e.cleverapps.io');
+
+
+
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define( 'DB_NAME', getenv('MYSQL_ADDON_DB') );
