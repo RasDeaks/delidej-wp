@@ -1,0 +1,23 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Ignorer folder using FS bucket
+wp-content/uploads/
+wp-content/plugins/
+wp-content/themes/
+wp-content/languages/
+
+# but keep folder structure
+!wp-content/uploads/.gitkeep
+!wp-content/plugins/.gitkeep
+!wp-content/themes/.gitkeep
+!wp-content/languages/.gitkeep
