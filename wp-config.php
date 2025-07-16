@@ -1,6 +1,6 @@
 <?php
 /**
- * The base configuration for WordPress
+ * The BASE configuration for WordPress
  *
  * The wp-config.php creation script uses this file during the installation.
  * You don't have to use the website, you can copy this file to "wp-config.php"
